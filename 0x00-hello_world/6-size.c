@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * sizeof char %c
- * sizeof int %d
- * sizeof long int %ld
- * sizeof long long int %ld
- * sizeof float %f
+ * main - Entry point
+ *
+ * Description: This function prints the sizes of different data types.
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
