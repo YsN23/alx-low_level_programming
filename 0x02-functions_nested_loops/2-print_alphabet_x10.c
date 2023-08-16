@@ -7,8 +7,9 @@
 void print_alphabet_x10(void)
 {
 char lowercaseAlphabet = 'a';
+int repetition;
 
-for (int repetition = 0; repetition < 10; repetition++)
+for (repetition = 0; repetition < 10; repetition++)
 {
 	for (lowercaseAlphabet = 'a'; lowercaseAlphabet <= 'z'; lowercaseAlphabet++)
 	{
