@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
- * print_numbers - print numbers from 0 to 9 using _putchar
- */
+* print_numbers -> print number from 0 to 9
+*/
 
 void print_numbers(void)
 {
-int i;
+char v;
 
-for (i = 0; i <= 9; i++)
-{
-	_putchar(i);
-}
+for (v = '0' ; v <= '9' ; v++)
+	_putchar(v);
 _putchar('\n');
 }
