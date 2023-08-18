@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_line - print line depending on n using _putchar
+ * @n: integer.
+ */
+
 void print_line(int n)
 {
 int i;
