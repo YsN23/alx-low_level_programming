@@ -11,7 +11,8 @@
 int main(void) {
     int i;
     int length = 14;
-    char password[length + 1];
+    #define MAX_LENGTH 100
+    char password[MAX_LENGTH + 1];
     char charset[] = "abcdefghijklmnopqrstuvwxyz%!&$*@#^ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     int charset_size = sizeof(charset) - 1;
 
