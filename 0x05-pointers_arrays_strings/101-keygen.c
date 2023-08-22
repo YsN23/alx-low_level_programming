@@ -1,28 +1,24 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 /**
- * main - Generates a random password
- * 
- * Return: Always 0 (Success)
-*/
+ * main - Generates random password
+ *
+ * Return: 0, nothing, nada, walo.
+ */
 
-int main(void) {
-    int i;
-    int length = 14;
-    #define MAX_LENGTH 100
-    char password[MAX_LENGTH + 1];
-    char charset[] = "abcdefghijklmnopqrstuvwxyz%!&$*@#^ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    int charset_size = sizeof(charset) - 1;
+int main(void)
+{
+	int summ;
+	char ran;
 
-    srand(time(NULL));
-    for (i = 0; i < length; i++) {
-        int index = rand() % charset_size;
-        password[i] = charset[index];
-    }
-    password[length] = '\0';
-
-    printf("%s\n", password);
-    return 0;
+	srand(time(NULL));
+	while (summ <= 2772)
+	{
+		ran = rand() % 128;
+		summ += ran;
+		putchar(ran);
+	}
+	putchar(2772 - summ);
+	return (0);
 }
