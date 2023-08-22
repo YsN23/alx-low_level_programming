@@ -9,13 +9,14 @@
 */
 
 int main(void) {
+    int i;
     int length = 14;
     char password[length + 1];
     char charset[] = "abcdefghijklmnopqrstuvwxyz%!&$*@#^ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     int charset_size = sizeof(charset) - 1;
 
     srand(time(NULL));
-    for (int i = 0; i < length; i++) {
+    for (i = 0; i < length; i++) {
         int index = rand() % charset_size;
         password[i] = charset[index];
     }
