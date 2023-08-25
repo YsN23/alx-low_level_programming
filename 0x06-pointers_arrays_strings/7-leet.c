@@ -10,8 +10,8 @@ char *leet(char *str)
 {
 int i = 0;
 int j;
-char arr1[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-char arr2[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+char *arr1 = "aAeEoOtTlL";
+char *arr2 = "4433007711";
 
 while (i != '\0')
 {
