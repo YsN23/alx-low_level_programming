@@ -15,13 +15,15 @@ char arr2[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
 while (i != '\0')
 {
-for (j = 0; j < 10; i++)
-{
-	if (str[i] == arr1[j])
+	while (j < 10)
 	{
-		str[i] = arr2[j];
+		if (str[i] == arr1[j])
+		{
+			str[i] = arr2[j];
+			break;
+		}
+	j++;
 	}
-}
 i++;
 }
 return (str);
