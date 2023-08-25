@@ -1,32 +1,35 @@
 #include "main.h"
 
 /**
- * leet - Encrypts a String
- * @str: Pointer Points To a string
+ * *leet - encode
+ *
+ * @str: str param
+ *
  * Return: str
-*/
+ */
 
 char *leet(char *str)
 {
-int i = 0;
-int j;
-char *arr1 = "aAeEoOtTlL";
-char *arr2 = "4433007711";
+	int i = 0;
+	int j = 0;
+	char *p1 = "aAeEoOtTlL";
+	char *p2 = "4433007711";
 
-while (i != '\0')
-{
+	while (str[i] != '\0')
+	{
+	j = 0;
 	while (j < 10)
 	{
-		if (str[i] == arr1[j])
-		{
-			str[i] = arr2[j];
-			break;
-		}
+	if (str[i] == p1[j])
+	{
+	str[i] = p2[j];
+	break;
+	}
 	j++;
 	}
-i++;
-}
-return (str);
-}
 
+	i++;
+	}
 
+	return (str);
+}
