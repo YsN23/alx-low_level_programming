@@ -12,8 +12,8 @@ char *rot13(char *str)
 {
 	int i = 0;
 	int j = 0;
-	char *p1 = "ABCDEFGHIJKLMabcdefghijklm";
-	char *p2 = "NOPQRSTUVWXYZnopqrstuvwxyz";
+	char *p1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *p2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (str[i] != '\0')
 	{
