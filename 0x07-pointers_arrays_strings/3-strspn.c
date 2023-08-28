@@ -16,12 +16,12 @@ while (s[i] != '\0')
 {
 if (s[i] == accept)
 {
-	result += 1;
+	return (result += 1);
 }
 
 i++;
 }
 
-return (result);
+return ('\0');
 
 }
