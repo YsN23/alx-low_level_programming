@@ -16,6 +16,7 @@ int j = 0;
 
 while (s[i] != '\0')
 {
+	j = 0;
 	while (accept[j] != '\0')
 	{
 		if (s[i] == accept[j])
@@ -28,5 +29,5 @@ while (s[i] != '\0')
 
 	}
 	i++;
-
+return ('\0');
 }
