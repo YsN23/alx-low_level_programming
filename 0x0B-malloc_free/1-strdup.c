@@ -2,15 +2,15 @@
 #include <stdlib.h>
 
 /**
- * _strdup - function that returns a pointer to a newly allocated space in mem
- * @str: string
- * Return: Pointer To newly string
+* _strdup - function that returns a pointer to a newly allocated space in memo
+* @str: string
+* Return: Pointer to the newly duplicated string
 */
 
 char *_strdup(char *str)
 {
 	unsigned int i;
-
+	unsigned int length = 0;
 	char *ptr;
 
 	if (str == NULL)
@@ -18,19 +18,22 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	ptr = (char *)malloc(sizeof(str));
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+
+	ptr = (char *)malloc((length + 1) * sizeof(char));
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	while (str[i] != '\0')
+	for (i = 0; i <= length; i++)
 	{
 		ptr[i] = str[i];
-
-		i++;
 	}
-	return (ptr);
 
+	return (ptr);
 }
