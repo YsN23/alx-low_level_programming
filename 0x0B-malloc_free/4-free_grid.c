@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-
 /**
  * free_grid - Frees memory allocated for a 2D grid.
  * @grid: Grid to be freed.
