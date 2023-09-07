@@ -2,53 +2,48 @@
 #include <stdlib.h>
 
 /**
-* string_nconcat - function that concatenates two strings
-* @s1: first str
-* @s2: second str
-* @n: size to be concatenated in s2
-* Return: char (ptr)
-*/
-
-
+ * string_nconcat - Concatenates two strings up to n bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes from s2 to concatenate.
+ *
+ * Return: A pointer to the concatenated string, or NULL on failure.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-		char *ptr;
+	char *conca;
+	unsigned int len1 = 0;
+	unsigned int len2 = 0;
+	unsigned int i, j;
 
-		unsigned int len1 = 0, len2 = 0, i, j;
+	if (s1 == NULL)
+		s1 = "";
 
-		if (s1 == NULL)
-			s1 = "";
-		if (s2 == NULL)
-			s2 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-		while (s1[len1] != '\0')
-			len1++;
+	while (s1[len1] != '\0')
+		len1++;
 
-		while (s2[len2] != '\0')
-			len2++;
+	while (s2[len2] != '\0')
+		len2++;
 
-		ptr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (n >= len2)
+		n = len2;
 
-		if (ptr == NULL)
-			return (NULL);
+	conca = (char *)malloc(len1 + n + 1);
 
-		for (i = 0; i < len1; i++)
-		ptr[i] = s1[i];
+	if (conca == NULL)
+		return (NULL);
 
-		if (n >= len2)
-		{
-			for (i = 0; i < count; i++)
-			{
-				ptr[i + j] = s2;
-			}
+	for (i = 0; i < len1; i++)
+		conca[i] = s1[i];
 
-		}
-		else
-		{
-			for (j = 0; j < len2; j++)
-				ptr[i + j] = s2[j];
-		}
+	for (j = 0; j < n; j++)
+		conca[i + j] = s2[j];
 
-		ptr[i + j] = '\0';
-		return (ptr);
+	conca[i + j] = '\0';
+
+	return (conca);
 }
+
