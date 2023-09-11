@@ -3,6 +3,7 @@
 /**
  * free_dog - Frees memory allocated for a dog (dog_t) structure.
  * @d: Pointer to the dog structure (dog_t) to be freed.
+ * Return: Void
  **/
 
 void free_dog(dog_t *d)
