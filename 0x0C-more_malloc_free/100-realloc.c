@@ -15,6 +15,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	int *new_ptr;
 	unsigned int i;
 
+
 	/* If ptr is NULL, equivalent to malloc(new_size) */
 	if (ptr == NULL)
 		return (malloc(new_size));
@@ -48,4 +49,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 
 	return (new_ptr);
+}
+
+
+switch (expression)
+{
+case /* constant-expression */:
+	/* code */
+	break;
+
+default:
+	break;
 }
