@@ -1,19 +1,14 @@
-#include "main.h"
-
-/**
- * print_alphabet - use putchar function to print a to z in lower.
- *
- */
-
 void print_alphabet(void)
 {
-char lowercaseAlphabet = 'a';
+ char c;
+ int i;
 
-while (lowercaseAlphabet <= 'z')
-{
-	_putchar(lowercaseAlphabet);
-	lowercaseAlphabet++;
+ for (i = 0; i >= 97 && i <=  122; i++)
+ {
+  _putchar(c);
+ }
+
+ _putchar('\n');
 
 }
-_putchar('\n');
-}
+
