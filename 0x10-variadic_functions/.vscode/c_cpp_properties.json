@@ -3,7 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/root/alx-low_level_programming/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "cStandard": "c17",
