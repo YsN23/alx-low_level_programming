@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * is_prime_number - checks if the num is prime
+ * is_prime_number - checks if the integer is prime
  * @n: integer
- * Return: check_divisibility(n, 2)
+ * Return: 1 if n is prime
+ * 0 otherwise
 */
 
 int is_prime_number(int n)
 {
-	if (n < 2)
+	if (n < -1)
 	{
 		return (0);
 	}
 
-	if (n == 2)
+	else if (n % 1 == 0 && n % n == 0)
 	{
 		return (1);
 	}
 
-	return (check_divisibility(n, 2));
+	else
+	{
+		return (0);
+	}
+
 }
-
-
-/**
- *
-*/
