@@ -4,6 +4,7 @@
 /**
  * add_dnodeint - add node at the beginning of the dll
  * @head: a Pointer to The head of the dll
+ * @n: data int
  * Return: The New Node
 */
 
@@ -18,10 +19,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new_node->n = n;
 	new_node->prev = NULL;
-
-	(*head)->prev = new_node;
 	new_node->next = *head;
 
+
+	(*head)->prev = new_node;
 	*head = new_node;
 
 
