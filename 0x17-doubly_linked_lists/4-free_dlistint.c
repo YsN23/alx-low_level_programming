@@ -1,20 +1,20 @@
 #include "lists.h"
 
 /**
- * free_dlistint - frees the nodes of dll
- * @head: Pointer to The head of dll
- * Return: Void
+* free_dlistint - frees the nodes of dll
+* @head: Pointer to The head of dll
+* Return: Void
 */
 
 
 void free_dlistint(dlistint_t *head)
 {
+	dlistint_t *swt;
+
 	while (head != NULL)
 	{
-		free(head.n)
-		free(head);
-
+		swt = head;
 		head = head->next;
+		free(swt);
 	}
-
 }
