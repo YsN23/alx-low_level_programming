@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc ./*.c -shared -o liball.so
+gcc -fPIC -c ./*.c && gcc *.o -shared -o liball.so
